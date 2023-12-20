@@ -15,7 +15,7 @@ namespace HR.LeaveManagement.Infrastructure;
 
 public static class InfrastructureServicesRegistration
 {
-    public static IServiceCollection ConfigureInfrastructureSercies(this IServiceCollection services, IConfiguration configuration)
+    public static IServiceCollection AddInfrastructureSercies(this IServiceCollection services, IConfiguration configuration)
     {
         services.Configure<EmailSettings>(configuration.GetSection("EmailSettings"));
         services.AddTransient<IEmailSender, EmailSender>();
